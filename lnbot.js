@@ -1,4 +1,5 @@
 const discord = require('discord.js');
+require('dotenv').config();
 
 const fetch = require("node-fetch");
 
@@ -43,4 +44,4 @@ bot.on('ready', () => {
   welcome(bot);
 });
 
-bot.login('ODM2NTc2MTU2MjU2OTYwNTcy.YIgAQg.kC9Hh6wS5ZgSnF0K-O1ZHsf5-2A');
+bot.login(process.env.BOT_TOKEN);
