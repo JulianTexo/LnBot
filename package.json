@@ -1,0 +1,14 @@
+{
+  "name": "lnbot",
+  "version": "1.0.0",
+  "description": "This is the Discord bot for the Little Nightmares Speedrunning Community!",
+  "main": "lnbot.js",
+  "scripts": {
+    "test": "node lnbot.js debug"
+  },
+  "author": "Julian Texo",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.3"
+  }
+}
