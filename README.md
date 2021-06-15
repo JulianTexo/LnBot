@@ -1,4 +1,4 @@
-#Little Nightmares Speedrunning Discord Bot
+# Little Nightmares Speedrunning Discord Bot
 
 This is the Discord-Bot on the Little Nightmares Speedrunning Discordserver.
 
