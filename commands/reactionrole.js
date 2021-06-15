@@ -1,7 +1,9 @@
 module.exports = {
+  //initializing the reactionrole module
     name: 'reactionrole',
     descritpion: "Sets up a reaction role message!",
     async execute(message, args, Discord, bot) {
+      //initializing arguments, channels, roles and emojis
       const rereg = (args[0] === "registerer");
       const channel = '838745116420210729';
       const Ln1Role = message.guild.roles.cache.find(role => role.name === "LN1");
@@ -11,7 +13,8 @@ module.exports = {
       const Ln1Emoji = '1️⃣';
       const Ln2Emoji = '2️⃣';
       const VlnEmoji = '0️⃣';
-  
+
+  //handling for bot restarts
   if(!rereg){
       let embed = new Discord.MessageEmbed()
         .setColor('#ffff00')
@@ -24,6 +27,7 @@ module.exports = {
       messageEmbed.react(VlnEmoji);
   }
   
+      //adding the role on reactions being added to the message
       bot.on('messageReactionAdd', async (reaction, user) => {
         if (reaction.message.partial) await reaction.message.fetch();
         if (reaction.partial) await reaction.fetch();
@@ -44,6 +48,7 @@ module.exports = {
         }
       });
   
+      //removing the role on reactions being removed from the message
       bot.on('messageReactionRemove', async (reaction, user) => {
         if (reaction.message.partial) await reaction.message.fetch();
         if (reaction.partial) await reaction.fetch();
